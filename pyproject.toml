@@ -1,14 +1,39 @@
 [tool.poetry]
 name = "python-clearlog"
 version = "0.1.0"
-description = "Efficiency first asynchronous JSONP logging for Python3."
+description = "Efficiency first asynchronous JSON logging for Python3."
 authors = ["Blake VandeMerwe"]
 license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.8"
+ujson = "^1.35"
 
 [tool.poetry.dev-dependencies]
+pytest = "^5.3.5"
+black = "^19.10b0"
+flake8 = "^3.7.9"
+tox = "^3.14.5"
+mypy = "^0.761"
+
+[tool.black]
+line-length = 96
+target-version = ['py37']
+include = '\.pyi?$'
+exclude = '''
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.mypy_cache
+    | \.tox
+    | _build
+    | build
+    | dist
+  )/
+  | scratch.py
+)
+'''
 
 [build-system]
 requires = ["poetry>=0.12"]
