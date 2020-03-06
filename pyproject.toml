@@ -8,6 +8,7 @@ license = "MIT"
 [tool.poetry.dependencies]
 python = "^3.8"
 ujson = "^1.35"
+xxhash = "^1.4.3"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.3.5"

@@ -5,3 +5,7 @@
 #   python-clearlog, 2020
 #   - blake
 # <<
+
+import sys
+
+IS_64 = sys.maxsize > 2 ** 32
